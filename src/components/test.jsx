@@ -15,7 +15,7 @@ const Emotionstyled = styled.div`
 `
 
 const ThemeUIStyled = styled.div`
-  background: ${gatsbyPluginThemeUi.colors.background};
+  background: ${gatsbyPluginThemeUi.colors.accent};
 `
 
 const InFileStyle = styled.div`
@@ -29,9 +29,7 @@ const Test = () => (
       <ThemeUIStyled>
         <Emotionstyled>
           {/*inline styled from theme-ui*/}
-          <Styled.h1>
-            Everything in this block is from the "Test" component
-          </Styled.h1>
+          <h1>Everything in this block is from the "Test" component</h1>
           <InFileStyle>This is 'infilestyle'</InFileStyle>
         </Emotionstyled>
       </ThemeUIStyled>

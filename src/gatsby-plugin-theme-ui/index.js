@@ -4,7 +4,7 @@ export default {
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: "inherit",
+    heading: "courier",
     monospace: "Menlo, monospace",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -22,7 +22,7 @@ export default {
     background: "#fff",
     primary: "#07c",
     secondary: "#30c",
-    accent: "",
+    accent: "red",
     highlight: "",
     muted: "#f6f6f6",
     modes: {

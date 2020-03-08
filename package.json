@@ -1,13 +1,17 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
+  "name": "Gatsby-IDE-Default",
+  "private": false,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "1.0",
+  "author": "Jamie Johnson",
   "dependencies": {
     "@emotion/core": "^10.0.28",
+    "@storybook/cli": "^5.3.14",
     "@theme-ui/typography": "^0.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "gatsby": "^2.19.7",
+    "gatsby-cli": "^2.10.2",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
@@ -18,8 +22,8 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "rebass": "^4.0.7",
@@ -28,7 +32,15 @@
     "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-storysource": "^5.3.14",
+    "@storybook/addon-viewport": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "babel-loader": "^8.0.6",
+    "prettier": "^1.19.1",
+    "require-context.macro": "^1.2.2"
   },
   "keywords": [
     "gatsby"
@@ -41,13 +53,13 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production build-storybook -s public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
+  "repository": "https://github.com/jamiejohnsonkc/IDE_Dev.git",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "main": "index.js"
 }
