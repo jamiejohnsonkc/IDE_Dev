@@ -1,17 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Styled } from "theme-ui"
-import Layout from "../../../components/layout"
+import Layout from "../../../components/organisms/Layout"
 import Image from "../../../components/image"
-import SEO from "../../../components/seo"
-import Test from "../../../components/test"
-import TestNav from "../../../components/testNav"
+import SEO from "../../../utils/seo"
+import TestComp from "../../../components/molecules/TestComp"
+import TestNav from "../../../components/molecules/TestNav"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <TestNav />
-    <Test />
+    <TestComp />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

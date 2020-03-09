@@ -1,8 +1,8 @@
 import React from "react"
 import { Styled } from "theme-ui"
-import "../gatsby-plugin-theme-ui"
+import "../../../gatsby-plugin-theme-ui"
 import styled from "@emotion/styled"
-import gatsbyPluginThemeUi from "../gatsby-plugin-theme-ui"
+import gatsbyPluginThemeUi from "../../../gatsby-plugin-theme-ui"
 import { Container } from "theme-ui"
 
 const TestColor = {
