@@ -1,9 +1,11 @@
-import { configure, addParameters, addDecorator } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import ThemeWrapper from "./themewrapper"
+import { configure, addDecorator } from "@storybook/react"
+import React from "react"
+import { ThemeProvider } from "theme-ui"
+import theme from "../src/gatsby-plugin-theme-ui/index"
 
-addDecorator(ThemeWrapper)
+import typography from "../src/utils/typography"
 
+typography.injectStyles()
 // automatically import all files ending in *.stories.js
 configure(require.context("../src", true, /\.stories\.js$/), module)
 
@@ -19,3 +21,7 @@ global.__PATH_PREFIX__ = ""
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
+
+addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
+
+configure(loadStories, module)

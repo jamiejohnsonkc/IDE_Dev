@@ -1,8 +1,8 @@
+import React from "react"
+import { ThemeProvider } from "theme-ui"
 import { toTheme } from "@theme-ui/typography"
 import githubTheme from "typography-theme-github"
-import merge from "lodash.merge"
-// const typography = toTheme(githubTheme)
-
-// export default merge(typography, {
-//   scaleRatio: 6,
-// })
+const theme = toTheme(githubTheme)
+export default props => (
+  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+)
