@@ -18,6 +18,23 @@ module.exports = ({ config }) => {
     require.resolve("babel-plugin-remove-graphql-queries"),
   ]
 
+  config.module.rules = config.module.rules.map(rule => {
+    if (rule.test.toString().includes("svg")) {
+      const test = rule.test
+        .toString()
+        .replace("svg|", "")
+        .replace(/\//g, "")
+      return { ...rule, test: new RegExp(test) }
+    } else {
+      return rule
+    }
+  })
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  })
+
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ["browser", "module", "main"]
 

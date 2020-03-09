@@ -1,8 +1,8 @@
-// import React from "react"
-// import TypogTest from "./TypogTest"
+import React from "react"
+import TypogTest from "./TypogTest.react"
 
-// export default {
-//   title: "TypogTest",
-// }
+export default {
+  title: "TypogTest",
+}
 
-// export const standard = () => <TypogTest />
+export const standard = () => <TypogTest />
