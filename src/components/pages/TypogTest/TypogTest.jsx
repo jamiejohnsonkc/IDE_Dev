@@ -9,7 +9,6 @@ const TypogTest = props => (
     <div className="TypogTestWrapper">Test content</div>
   </ThemeProvider>
 )
-
 TypogTest.propTypes = {
   // bla: PropTypes.string,
 }
