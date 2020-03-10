@@ -1,3 +1,3 @@
-import PageNotFound from "./404Page"
+import PageNotFound from "./404Page.react"
 
 export default PageNotFound
