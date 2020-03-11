@@ -16,7 +16,14 @@ module.exports = {
       options: {},
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-theme-ui`,
+    "gatsby-plugin-theme-ui",
+    {
+      resolve: "gatsby-theme-style-guide",
+      options: {
+        // sets path for generated page
+        basePath: "/design-system",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

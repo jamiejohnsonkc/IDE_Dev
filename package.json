@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@storybook/cli": "^5.3.14",
+    "@theme-ui/style-guide": "^0.3.0",
     "@theme-ui/typography": "^0.3.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
@@ -21,6 +22,7 @@
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typography": "^2.3.23",
     "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-theme-style-guide": "^0.3.1",
     "gatsby-transformer-sharp": "^2.3.13",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",

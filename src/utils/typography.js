@@ -1,29 +1,88 @@
 import Typography from "typography"
+import gray from "gray-percentage"
+
 const typography = new Typography({
-  title: "",
-  baseFontSize: "16px", // defaults to 16
-  baseLineHeight: 1.63, // defaults to 1.45
-  scaleRatio: 2, //This value is the ratio between the h1 font size and the baseFontSize. So if the scale ratio is 2 and the baseFontSize is 16px then the h1 font size is 32px.
+  title: "GitHub",
+  baseFontSize: "16px",
+  baseLineHeight: 1.625,
   headerFontFamily: [
-    "Courier",
-    "Avenir Next",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Helvetica",
     "Arial",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica",
     "sans-serif",
-  ], // Defaults to a system UI font stack.
-  bodyFontFamily: ["monospace", "serif"], // defaults to ['georgia', 'serif']
-  headerGray: "", // The “lightness” value for headers (set in hsl). Defaults to 20.
-  headerGrayHue: "", // The “hue” value for headers (set in hsl). Defaults to 0. Also accepts three named hues, cool, slate, and warm.
-  bodyGray: "", // The “lightness” value for body text (in hsl). Defaults to 20.
-  bodyGrayHue: "", // The “hue” value for body text (in hsl). Defaults to 0. Also accepts three named hues, cool, slate, and warm.
-  headerWeight: "", // defaults to bold
-  bodyWeight: "", // defaults to normal
-  boldWeight: "", // defaults to bold, accepts b, strong, dt, th
-  blockMarginBottom: "", //defaults to one rhythm unit
-  includeNormalize: "", // default true
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+  ],
+  bodyFontFamily: [
+    "Courier",
+    "Arial",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+  ],
+  monospace: ["monospace", "Menlo"],
+  scaleRatio: 2,
+  bodyColor: "hsla(0,0%,0%,0.8)",
+  headerWeight: 700,
+  bodyWeight: "normal",
+  boldWeight: 600,
+  // Github has all block elements use 1/2 rhythm not a full rhythm.
+  blockMarginBottom: 1 / 2,
+  overrideStyles: ({ rhythm }) => ({
+    h1: {
+      borderBottom: `1px solid ${gray(93)}`,
+      paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
+      marginBottom: rhythm(3 / 4),
+      marginTop: rhythm(1.5),
+    },
+    h2: {
+      borderBottom: `1px solid ${gray(93)}`,
+      paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
+      marginBottom: rhythm(1 / 4),
+      marginTop: rhythm(1),
+    },
+    h6: {
+      color: gray(47),
+    },
+    "h3,h4,h5,h6": {
+      marginBottom: rhythm(1 / 2),
+      marginTop: rhythm(1),
+    },
+    "ol,ul": {
+      marginLeft: rhythm(1.25),
+    },
+    // children ol, ul
+    "li>ol,li>ul": {
+      marginLeft: rhythm(1.25),
+    },
+    a: {
+      color: "#4078c0",
+      textDecoration: "none",
+    },
+    "a:hover,a:active": {
+      textDecoration: "underline",
+    },
+    blockquote: {
+      borderLeft: `4px solid ${gray(87)}`,
+      color: gray(47),
+      marginTop: 0,
+      marginRight: 0,
+      marginLeft: 0,
+      paddingLeft: `calc(${rhythm(1 / 2)} - 1px)`,
+    },
+  }),
 })
+
 export default typography
 
 // see value definitions at https://kyleamathews.github.io/typography.js/
