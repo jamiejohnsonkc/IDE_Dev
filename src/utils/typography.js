@@ -6,19 +6,18 @@ const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.625,
   headerFontFamily: [
-    "Arial",
     "-apple-system",
     "BlinkMacSystemFont",
     "Segoe UI",
     "Roboto",
     "Helvetica",
+    "Arial",
     "sans-serif",
     "Apple Color Emoji",
     "Segoe UI Emoji",
     "Segoe UI Symbol",
   ],
   bodyFontFamily: [
-    "Courier",
     "Arial",
     "-apple-system",
     "BlinkMacSystemFont",
@@ -40,13 +39,13 @@ const typography = new Typography({
   blockMarginBottom: 1 / 2,
   overrideStyles: ({ rhythm }) => ({
     h1: {
-      borderBottom: `1px solid ${gray(93)}`,
+      // borderBottom: `1px solid ${gray(93)}`,
       paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
       marginBottom: rhythm(3 / 4),
       marginTop: rhythm(1.5),
     },
     h2: {
-      borderBottom: `1px solid ${gray(93)}`,
+      // borderBottom: `1px solid ${gray(93)}`,
       paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
       marginBottom: rhythm(1 / 4),
       marginTop: rhythm(1),
