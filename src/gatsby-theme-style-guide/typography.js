@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled, Flex, Box, useThemeUI, space } from "theme-ui"
 import { TypeScale, TypeStyle } from "@theme-ui/style-guide"
+import Navbar from "../components/molecules/Navbar"
 
 const Row = props => (
   <div
@@ -10,10 +11,19 @@ const Row = props => (
       alignItems: "baseline",
       flexWrap: "wrap",
       marginY: "3",
-      width: ["64%", "83%", "91%"],
+      width: "100%",
       "& > div": {
         px: 3,
       },
+    }}
+  />
+)
+
+const SectionHead = props => (
+  <Styled.h3
+    {...props}
+    sx={{
+      width: "100%",
     }}
   />
 )
@@ -31,7 +41,15 @@ export default props => {
 
             <Flex>
               {Object.keys(fonts).map(name => (
-                <Box sx={{ flex: "1 1 auto", m: "3" }}>
+                <Box
+                  sx={{
+                    flex: "1 1 auto",
+                    px: "2",
+                    py: "3",
+                    mx: "1",
+                    bg: "muted",
+                  }}
+                >
                   <div key={name}>
                     <TypeStyle fontFamily={name} fontSize={3}>
                       <div style={{ whiteSpace: "normal" }}>
@@ -112,9 +130,23 @@ export default props => {
             <code>someday code will go here</code>
           </pre>
           <Styled.h3>Table</Styled.h3>
-          <table>table</table>
-          <Styled.h3>FieldSet</Styled.h3>
-          <fieldset>fieldset</fieldset>
+          <table style={{ width: "61%" }}>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+          </table>
           <Styled.h3>Block Quote</Styled.h3>
           <blockquote>
             Cupidatat aute proident qui dolore nisi aliquip. In exercitation
@@ -129,21 +161,27 @@ export default props => {
           <address>address</address>
         </Box>
       </Row>
+      {/*  <Row>
+        <Box>
+          <Styled.h3>Font Sizes</Styled.h3>
+          <TypeScale />
+        </Box>
+      </Row> */}
 
-      <Styled.h3>Font Sizes</Styled.h3>
-      <TypeScale />
       {fontWeights && (
         <div>
-          <Styled.h3>Font Weights</Styled.h3>
           <Row>
-            {Object.keys(fontWeights).map(name => (
-              <div key={name}>
-                <TypeStyle fontSize={6} fontWeight={name}>
-                  {fontWeights[name]}
-                </TypeStyle>
-                <Styled.code>{name}</Styled.code>
-              </div>
-            ))}
+            <Box>
+              <Styled.h3>Font Weights</Styled.h3>
+              {Object.keys(fontWeights).map(name => (
+                <div key={name}>
+                  <TypeStyle fontSize={6} fontWeight={name}>
+                    {fontWeights[name]}
+                  </TypeStyle>
+                  <Styled.code>{name}</Styled.code>
+                </div>
+              ))}
+            </Box>
           </Row>
         </div>
       )}
@@ -162,6 +200,22 @@ export default props => {
           </Row>
         </div>
       )}
+      <div>
+        <Row>
+          <Box>
+            <Styled.h3>Font Sizes</Styled.h3>
+            <TypeScale />
+          </Box>
+        </Row>
+      </div>
+      <div>
+        <Row>
+          <Box style={{ width: "100%", padding: "0" }}>
+            <Styled.h3>Navbar</Styled.h3>
+            <Navbar />
+          </Box>
+        </Row>
+      </div>
     </section>
   )
 }

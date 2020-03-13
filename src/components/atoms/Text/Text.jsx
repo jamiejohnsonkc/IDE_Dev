@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { typography } from "styled-system"
 
-const Text = styled("div")({
-  color: "blue", //emotion styled
-})
+const Text = styled.div`
+  color: blue;
+`
 
 Text.propTypes = {
   // bla: PropTypes.string,

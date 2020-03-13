@@ -14,7 +14,7 @@ export default {
     heading: `${typography.options.headerWeight}`,
     bold: `${typography.options.boldWeight}`,
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  // fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   // lineHeights: {
   //   body: 1.5,
   //   heading: 1.125,
@@ -41,6 +41,36 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
     },
+    display: {
+      variant: "text.heading",
+      fontFamily: "heading",
+      lineHeight: "heading",
+      fontWeight: "body",
+    },
+    caps: {
+      textTransform: "uppercase",
+      letterSpacing: "0.2em",
+    },
+    tight: {
+      letterSpacing: "-.05em",
+    },
+    loose: {
+      letterSpacing: ".025em",
+    },
+  },
+  links: {
+    bold: {
+      fontWeight: "bold",
+    },
+    nav: {
+      fontWeight: "bold",
+      color: "inherit",
+      textDecoration: "none",
+      px: 2,
+      py: 1,
+      textTransform: "lowercase",
+      letterSpacing: "0.2em",
+    },
   },
   styles: {
     root: {
@@ -48,6 +78,7 @@ export default {
       lineHeight: "body",
       fontWeight: "body",
     },
+
     h1: {
       variant: "text.heading",
       fontSize: `${typography.h1}`,
@@ -79,22 +110,25 @@ export default {
         color: "inherit",
       },
     },
+    a: {
+      fontFamily: "text.heading",
+    },
     code: {
       fontFamily: "monospace",
       fontSize: "inherit",
     },
-    table: {
-      width: "100%",
-      borderCollapse: "separate",
-      borderSpacing: 0,
-    },
-    th: {
-      textAlign: "left",
-      borderBottomStyle: "solid",
-    },
-    td: {
-      textAlign: "left",
-      borderBottomStyle: "solid",
-    },
+  },
+  table: {
+    width: "100%",
+    borderCollapse: "separate",
+    borderSpacing: 0,
+  },
+  th: {
+    textAlign: "left",
+    borderBottomStyle: "solid",
+  },
+  td: {
+    textAlign: "left",
+    borderBottomStyle: "solid",
   },
 }

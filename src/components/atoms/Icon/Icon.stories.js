@@ -6,4 +6,5 @@ export default {
   title: 'Icon',
 };
 
-export const Default = () => <Icon name="Arc" />;
+export const default = () => <Icon name="Arc" />;
+

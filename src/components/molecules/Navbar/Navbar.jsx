@@ -1,5 +1,6 @@
 import React from "react"
-import { Box, Flex, Link, Text } from "rebass"
+import { Box, Flex, Text } from "rebass"
+import NavLink from "../../molecules/NavLink"
 
 const Navbar = ({ image, title, description }) => (
   <Flex px={2} color="white" bg="black" alignItems="center">
@@ -7,9 +8,15 @@ const Navbar = ({ image, title, description }) => (
       Rebass
     </Text>
     <Box mx="auto" />
-    <Link variant="nav" href="/">
-      Profile
-    </Link>
+    <NavLink variant="nav" href="/">
+      services
+    </NavLink>
+    <NavLink variant="nav" href="/">
+      insights
+    </NavLink>
+    <NavLink variant="nav" href="/">
+      profile
+    </NavLink>
   </Flex>
 )
 

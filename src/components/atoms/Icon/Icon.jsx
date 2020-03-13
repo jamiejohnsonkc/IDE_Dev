@@ -7,6 +7,8 @@ import Webpack from "./icons/webpack.svg"
 
 const Icon = props => {
   switch (props.name) {
+    case "JIM_glyph":
+      return <Arc {...props} />
     case "Arc":
       return <Arc {...props} />
     case "Shapes":

@@ -30,14 +30,14 @@ const typography = new Typography({
     "Segoe UI Symbol",
   ],
   monospace: ["monospace", "Menlo"],
-  scaleRatio: 2,
+  scaleRatio: 1.61803398875,
   bodyColor: "hsla(0,0%,0%,0.8)",
   headerWeight: 700,
   bodyWeight: "normal",
   boldWeight: 600,
   // Github has all block elements use 1/2 rhythm not a full rhythm.
   blockMarginBottom: 1 / 2,
-  overrideStyles: ({ rhythm }) => ({
+  overrideStyles: ({ scale, rhythm }) => ({
     h1: {
       // borderBottom: `1px solid ${gray(93)}`,
       paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
