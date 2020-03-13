@@ -3,12 +3,13 @@ import PropTypes from "prop-types"
 import "./Icon.css"
 import Arc from "./icons/arc.svg"
 import Shapes from "./icons/shapes.svg"
+import Jimglyph from "./icons/jimglyph.svg"
 import Webpack from "./icons/webpack.svg"
 
 const Icon = props => {
   switch (props.name) {
-    case "JIM_glyph":
-      return <Arc {...props} />
+    case "Jimglyph":
+      return <Jimglyph {...props} />
     case "Arc":
       return <Arc {...props} />
     case "Shapes":

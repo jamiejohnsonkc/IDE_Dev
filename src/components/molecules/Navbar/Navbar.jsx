@@ -1,12 +1,25 @@
 import React from "react"
 import { Box, Flex, Text } from "rebass"
 import NavLink from "../../molecules/NavLink"
+import { Link } from "theme-ui"
+import Icon from "../../atoms/Icon"
+import styled from "@emotion/styled"
+
+const IconMargin = styled(Icon)`
+  background: black;
+  width: 3rem;
+  fill: white;
+  margin: 2rem 2rem;
+  &:hover {
+    fill: blue;
+  }
+`
 
 const Navbar = ({ image, title, description }) => (
   <Flex px={2} color="white" bg="black" alignItems="center">
-    <Text p={2} fontWeight="bold">
-      Rebass
-    </Text>
+    <Link href="/">
+      <IconMargin name="Jimglyph" />
+    </Link>
     <Box mx="auto" />
     <NavLink variant="nav" href="/">
       services

@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react"
 
-import Icon from '.';
+import Icon from "."
 
 export default {
-  title: 'Icon',
-};
+  title: "Icon",
+}
 
-export const default = () => <Icon name="Arc" />;
+export const Arc = () => <Icon name="Arc" />
 
+export const Jimglyph = () => <Icon name="Jimglyph" />
