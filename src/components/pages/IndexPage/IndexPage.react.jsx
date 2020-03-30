@@ -7,6 +7,6 @@ import SEO from "../../../utils/seo"
 import TestComp from "../../../components/molecules/TestComp"
 import TestNav from "../../../components/molecules/TestNav"
 
-const IndexPage = () => <div>index page</div>
+const IndexPage = () => <Layout />
 
 export default IndexPage
