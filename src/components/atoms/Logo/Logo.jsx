@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Icon from "../../atoms/Icon"
+import Icon from "../Icon"
 import { Link } from "theme-ui"
 import styled from "@emotion/styled"
 //import { Test } from './Logo.styles';

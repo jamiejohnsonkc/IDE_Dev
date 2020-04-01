@@ -1,21 +1,21 @@
 import React from "react"
 import { Box, Flex } from "rebass"
-import NavLink from "../../molecules/NavLink"
+import { Link } from "theme-ui"
 
 const Navbar = ({ image, title, description }) => (
   <Flex px={2} color="white" bg="black" alignItems="center">
     <Box mx="auto" />
-    <NavLink variant="nav" href="/">
+    <Link variant="MainNav" href="/">
       services
-    </NavLink>
-    <NavLink variant="nav" href="/">
+    </Link>
+    <Link variant="MainNav" href="/">
       insights
-    </NavLink>
-    <NavLink variant="nav" href="/">
+    </Link>
+    <Link variant="MainNav" href="/">
       profile
-    </NavLink>
+    </Link>
   </Flex>
-) 
+)
 
 Navbar.propTypes = {
   // bla: PropTypes.string,

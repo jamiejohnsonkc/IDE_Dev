@@ -1,19 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/** @jsx jsx */
+import { jsx, Flex } from "theme-ui"
+import React from "react"
+import PropTypes from "prop-types"
 //import { Test } from './Hero.styles';
 
-const Hero = (props) => (
-  <div className="HeroWrapper">
-    Test content
-  </div>
-);
-
+const Hero = props => (
+  <Flex height="100%" flexGrow="1">
+    HeroContent
+  </Flex>
+)
 Hero.propTypes = {
   // bla: PropTypes.string,
-};
+}
 
 Hero.defaultProps = {
   // bla: 'test',
-};
+}
 
-export default Hero;
+export default Hero

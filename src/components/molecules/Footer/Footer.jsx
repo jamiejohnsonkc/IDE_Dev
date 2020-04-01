@@ -1,19 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import React from "react"
+import PropTypes from "prop-types"
 //import { Test } from './Footer.styles';
 
-const Footer = (props) => (
-  <div className="FooterWrapper">
-    Test content
-  </div>
-);
+const Footer = props => (
+  <footer
+    {...props}
+    sx={{
+      bg: "black",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    }}
+  >
+    <div
+      sx={{
+        color: "white",
+      }}
+    >
+      test footer
+    </div>
+  </footer>
+)
 
 Footer.propTypes = {
-  // bla: PropTypes.string,
-};
+  siteTitle: PropTypes.string,
+}
 
 Footer.defaultProps = {
-  // bla: 'test',
-};
+  siteTitle: ``,
+}
 
-export default Footer;
+export default Footer

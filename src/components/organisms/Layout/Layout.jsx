@@ -1,21 +1,27 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
+/** @jsx jsx */
+import { jsx, Flex } from "theme-ui"
 import React from "react"
-import Navbar from "../../molecules/Navbar"
-import Hero from "../Hero"
 import Header from "../../molecules/Header"
+import Footer from "../../molecules/Footer"
 
-const Layout = () => (
-  <div>
+const Layout = ({ children }) => (
+  <Flex
+    sx={{
+      flexDirection: "column",
+      height: "100%",
+    }}
+  >
     <Header />
-    <Navbar />
-    <Hero />
-  </div>
+    <main
+      style={{
+        flexGrow: 1,
+      }}
+    >
+      {children}
+    </main>
+
+    <Footer />
+  </Flex>
 )
 
 export default Layout

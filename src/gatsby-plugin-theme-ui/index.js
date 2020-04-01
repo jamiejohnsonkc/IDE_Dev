@@ -26,6 +26,7 @@ export default {
     secondary: "#30c",
     accent: "red",
     highlight: "",
+    white: "#fff",
     muted: "#f6f6f6",
     modes: {
       dark: {
@@ -62,14 +63,18 @@ export default {
     bold: {
       fontWeight: "bold",
     },
-    nav: {
+    MainNav: {
       fontWeight: "bold",
-      color: "inherit",
+      color: "white",
       textDecoration: "none",
       px: 2,
       py: 1,
       textTransform: "lowercase",
       letterSpacing: "0.2em",
+      "&:hover": {
+        color: "black",
+        bg: "white",
+      },
     },
   },
   styles: {

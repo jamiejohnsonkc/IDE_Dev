@@ -5,6 +5,7 @@ import Arc from "./icons/arc.svg"
 import Shapes from "./icons/shapes.svg"
 import Jimglyph from "./icons/jimglyph.svg"
 import Webpack from "./icons/webpack.svg"
+import Hamburger from "./icons/hamburger.svg"
 
 const Icon = props => {
   switch (props.name) {
@@ -16,6 +17,8 @@ const Icon = props => {
       return <Shapes {...props} />
     case "Webpack":
       return <Webpack {...props} />
+    case "Hamburger":
+      return <Hamburger {...props} />
   }
 }
 
