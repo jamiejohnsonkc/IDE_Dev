@@ -1,0 +1,8 @@
+html {
+  height: 90vh;
+}
+
+.sb-show-main,
+#root {
+  height: 100%;
+}

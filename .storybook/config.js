@@ -24,4 +24,6 @@ window.___navigate = pathname => {
 
 addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 
+import "./storybookbrowserstyles.css"
+
 configure(loadStories, module)

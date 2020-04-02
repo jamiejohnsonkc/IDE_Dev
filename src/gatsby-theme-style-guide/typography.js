@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled, Flex, Box, useThemeUI, space } from "theme-ui"
 import { TypeScale, TypeStyle } from "@theme-ui/style-guide"
-import Navbar from "../components/molecules/Navbar"
+import Navbar from "../components/navigation/NavDrawer"
 
 const Row = props => (
   <div

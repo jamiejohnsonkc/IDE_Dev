@@ -1,18 +1,17 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 import React from "react"
-import { Box, Flex } from "theme-ui"
 import PropTypes from "prop-types"
-//import { Test } from './Drawer.styles';
 
 const Drawer = ({ props, children }) => (
   <Flex
     sx={{
-      flexGrow: 1,
+      flexGrow: "1",
       flexDirection: "column",
+      height: "100%",
     }}
   >
-    <Box>{children}</Box>
+    {children}
   </Flex>
 )
 

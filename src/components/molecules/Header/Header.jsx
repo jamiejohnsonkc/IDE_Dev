@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import Navbar from "../../molecules/Navbar"
+import Navbar from "../../navigation/Navbar"
 import Logo from "../../atoms/Logo"
 
 const Header = props => (

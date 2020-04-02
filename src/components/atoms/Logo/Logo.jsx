@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Icon from "../Icon"
-import { Link } from "theme-ui"
+import { Link } from "@reach/router"
 import styled from "@emotion/styled"
 //import { Test } from './Logo.styles';
 
 const IconMargin = styled(Icon)`
-  background: black;
   width: 3rem;
   fill: white;
   margin: 2rem 2rem;
@@ -15,7 +14,7 @@ const IconMargin = styled(Icon)`
   }
 `
 const Logo = props => (
-  <Link href="/">
+  <Link to="/">
     <IconMargin name="Jimglyph" />
   </Link>
 )
