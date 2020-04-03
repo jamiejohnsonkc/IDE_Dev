@@ -1,11 +1,16 @@
-import React from 'react';
-import Navbar from './Navbar';
-
+import React from "react"
+import Navbar from "./Navbar"
 
 export default {
-    title: 'Navbar',
-    
-};
+  title: "Navbar",
+}
 
-export const standard = () => <Navbar                
-/>;
+export const standard = () => (
+  <div
+    style={{
+      background: "black",
+    }}
+  >
+    <Navbar />
+  </div>
+)

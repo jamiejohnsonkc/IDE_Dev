@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react"
-import { Flex, jsx } from "theme-ui"
+import { Flex, jsx, NavLink } from "theme-ui"
 import PropTypes from "prop-types"
 import Drawer from "../../molecules/Drawer"
 import { Link } from "@reach/router"
@@ -10,6 +10,7 @@ import { Link } from "@reach/router"
 const NavDrawer = props => (
   <Drawer>
     <Flex
+      as="nav"
       sx={{
         height: "100%",
         flexDirection: "column",
@@ -17,14 +18,16 @@ const NavDrawer = props => (
         flexGrow: "1",
       }}
     >
-      <Link
-        to="/"
-        sx={{
-          variant: "links.drawerNav",
-        }}
-      >
-        TestLink
-      </Link>
+      <NavLink>
+        <Link
+          to="/"
+          sx={{
+            variant: "links.drawerNav",
+          }}
+        >
+          TestLink
+        </Link>
+      </NavLink>
     </Flex>
   </Drawer>
 )
