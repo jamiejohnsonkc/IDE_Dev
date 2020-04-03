@@ -35,7 +35,7 @@ export default {
         primary: "#0cf",
       },
     },
-  }, 
+  },
 
   text: {
     heading: {
@@ -65,12 +65,13 @@ export default {
       fontWeight: "bold",
     },
     mainNav: {
-      fontWeight: "bold",
+      fontWeight: "regular",
+      fontSize: 0,
       color: "white",
       textDecoration: "none",
       px: 2,
-      py: 1,
-      textTransform: "lowercase",
+      py: 2,
+      textTransform: "uppercase",
       letterSpacing: "0.2em",
       "&:hover": {
         color: "black",

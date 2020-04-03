@@ -1,4 +1,4 @@
 import React from "react"
-import NavItems from "../components/navigation/NavItems"
+import NavMenu from "../components/navigation/NavMenu"
 
-export default () => <NavItems />
+export default () => <NavMenu />
