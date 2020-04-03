@@ -4,11 +4,7 @@ import Layout from "../../organisms/Layout"
 import Hero from "../../organisms/Hero"
 //import { Test } from './Splash.styles';
 
-const Splash = props => (
-  <Layout>
-    <Hero />
-  </Layout>
-)
+const Splash = () => <Layout />
 
 Splash.propTypes = {
   // bla: PropTypes.string,

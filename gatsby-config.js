@@ -1,8 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `JIM's gatsby design system starter`,
+    description: `Gatsby, storybook, theme-ui`,
+    author: `Jamie Johnson`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "services",
+        link: "/services",
+      },
+      {
+        name: "insights",
+        link: "/insights",
+      },
+      {
+        name: "profile",
+        link: "/profile",
+      },
+    ],
   },
   plugins: [
     {
