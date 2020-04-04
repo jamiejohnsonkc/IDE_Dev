@@ -1,11 +1,18 @@
-import React from 'react';
-import NavDrawer from './NavDrawer';
-
+import React from "react"
+import NavDrawer from "./NavDrawer"
 
 export default {
-    title: 'NavDrawer',
-    
-};
+  title: "NavDrawer",
+}
 
-export const standard = () => <NavDrawer                
-/>;
+export const standard = () => (
+  <div
+    style={{
+      background: "yellow",
+      height: "100%",
+      width: "100%",
+    }}
+  >
+    <NavDrawer />
+  </div>
+)

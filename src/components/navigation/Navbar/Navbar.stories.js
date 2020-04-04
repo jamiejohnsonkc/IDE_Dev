@@ -1,8 +1,10 @@
 import React from "react"
-import Navbar from "./Navbar"
+import NavMenu from "./NavMenu"
+import { withKnobs, text } from "@storybook/addon-knobs"
 
 export default {
-  title: "Navbar",
+  title: "NavMenu",
+  decorators: [withKnobs],
 }
 
 export const standard = () => (
@@ -11,6 +13,6 @@ export const standard = () => (
       background: "black",
     }}
   >
-    <Navbar />
+    <NavMenu siteTitle={text("siteTitle", "")} />
   </div>
 )
