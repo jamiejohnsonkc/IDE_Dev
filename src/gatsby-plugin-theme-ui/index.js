@@ -1,7 +1,9 @@
 import React from "react"
 import typography from "../utils/typography"
+import { merge } from "theme-ui"
+import navMenu from "./navMenu"
 
-export default {
+export default merge(navMenu, {
   breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -151,4 +153,4 @@ export default {
     textAlign: "left",
     borderBottomStyle: "solid",
   },
-}
+})

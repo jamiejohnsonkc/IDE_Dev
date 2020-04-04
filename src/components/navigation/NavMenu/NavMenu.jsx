@@ -1,8 +1,11 @@
+/** @jsx jsx */
+
+import { jsx } from "theme-ui"
 import React from "react"
 import { StaticQuery, graphql, Helmet, Link } from "gatsby"
 import NavItem from "../NavItem"
 import PropTypes from "prop-types"
-import { Box } from "theme-ui"
+import { Box, NavLink, Flex } from "theme-ui"
 
 const NavMenu = () => (
   <StaticQuery
@@ -23,13 +26,32 @@ const NavMenu = () => (
       <React.Fragment>
         <Box
           as="nav"
-          style={{
-            padding: "1.45rem 1.0875rem",
-            justifyItems: "space-between",
-            alignItems: "center",
+          sx={{
+            variant: "navMenu.horizontal.box",
           }}
         >
-          <NavItem menuLinks={data.site.siteMetadata.menuLinks} />
+          <Flex
+            as="ul"
+            sx={{
+              variant: "navMenu.horizontal.ul",
+            }}
+          >
+            {data.site.siteMetadata.menuLinks.map(link => (
+              <li
+                key={link.name}
+                sx={{
+                  variant: "navMenu.horizontal.li",
+                }}
+              >
+                <Link
+                  to={link.link}
+                  sx={{ variant: "navMenu.horizontal.link" }}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </Flex>
         </Box>
       </React.Fragment>
     )}
