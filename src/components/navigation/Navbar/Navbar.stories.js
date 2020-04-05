@@ -1,5 +1,5 @@
 import React from "react"
-import NavMenu from "./NavMenu"
+import Navbar from "./Navbar"
 import { withKnobs, text } from "@storybook/addon-knobs"
 
 export default {

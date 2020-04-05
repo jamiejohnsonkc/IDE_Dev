@@ -1,39 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import NavBar from "../../navigation/NavBar"
-import Logo from "../../atoms/Logo"
-import { StaticQuery, graphql } from "gatsby"
+import Navbar from "../../navigation/Navbar"
+import styled from "@emotion/styled"
 
-const Header = ({ props }) => (
-  <StaticQuery
-    query={graphql`
-      query HeadingQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <header
-        {...props}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: theme => `${theme.header.justifyContent}`,
-          backgroundColor: theme => `${theme.header.backgroundColor}`,
-        }}
-      >
-        {/* <h1>{data.site.siteMetadata.title}</h1> */}
-        <Logo />
-        <NavBar />
-      </header>
-    )}
-  />
+const StyledHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const Header = props => (
+  <StyledHeader
+    sx={{
+      p: 4,
+    }}
+  >
+    <Navbar />
+  </StyledHeader>
 )
 
 Header.propTypes = {
@@ -41,7 +26,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: PropTypes.string,
 }
 
 export default Header

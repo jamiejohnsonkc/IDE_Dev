@@ -1,4 +1,4 @@
 import React from "react"
-import NavBar from "../components/navigation/Navbar"
+import Navbar from "../components/navigation/Navbar"
 
-export default () => <NavBar />
+export default () => <Navbar />

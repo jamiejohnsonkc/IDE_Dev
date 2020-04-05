@@ -3,7 +3,7 @@ import React from "react"
 import { Flex, jsx, NavLink } from "theme-ui"
 import PropTypes from "prop-types"
 import Drawer from "../../molecules/Drawer"
-import NavBar from "../Navbar"
+import Navbar from "../Navbar"
 //import { Test } from './NavDrawer.styles';
 
 const NavDrawer = props => (
@@ -12,7 +12,7 @@ const NavDrawer = props => (
       backgroundColor: "blue",
     }}
   >
-    <NavBar />
+    <Navbar />
   </Drawer>
 )
 

@@ -63,23 +63,19 @@ export default merge(navBar, {
     },
   },
   links: {
-    bold: {
-      fontWeight: "bold",
+    fontWeight: "regular",
+    fontSize: 0,
+    color: "white",
+    textDecoration: "none",
+    px: 2,
+    py: 2,
+    textTransform: "uppercase",
+    letterSpacing: "0.2em",
+    "&:hover": {
+      color: "black",
+      bg: "white",
     },
-    mainNav: {
-      fontWeight: "regular",
-      fontSize: 0,
-      color: "white",
-      textDecoration: "none",
-      px: 2,
-      py: 2,
-      textTransform: "uppercase",
-      letterSpacing: "0.2em",
-      "&:hover": {
-        color: "black",
-        bg: "white",
-      },
-    },
+
     drawerNav: {
       fontWeight: "bold",
       color: "white",
@@ -131,9 +127,6 @@ export default merge(navBar, {
       code: {
         color: "inherit",
       },
-    },
-    a: {
-      fontFamily: "text.heading",
     },
     code: {
       fontFamily: "monospace",

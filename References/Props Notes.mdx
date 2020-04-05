@@ -48,3 +48,35 @@ render(
   </div>
 )
 ```
+
+## Styling via jsx/sx
+
+```jsx
+const Header = ({ props }) => (
+  <StaticQuery
+    query={graphql`
+      query HeadingQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <header
+        {...props}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: theme => `${theme.header.justifyContent}`,
+          backgroundColor: theme => `${theme.header.backgroundColor}`,
+        }}
+      >
+        {/* <h1>{data.site.siteMetadata.title}</h1> */}
+        <Navbar />
+      </header>
+    )}
+  />
+)
+```

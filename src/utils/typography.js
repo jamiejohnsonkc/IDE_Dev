@@ -65,7 +65,6 @@ const typography = new Typography({
       marginLeft: rhythm(1.25),
     },
     a: {
-      color: "#4078c0",
       textDecoration: "none",
     },
     "a:hover,a:active": {
