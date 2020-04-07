@@ -24,6 +24,31 @@ const TestTheme = {
 <Foo color={TestTheme.colors.me} />
 ```
 
+## Styling via Styled-System
+
+```javascript
+// example
+import styled from 'styled-components'
+import { space, color } from 'styled-system'
+
+const Card = styled.div(
+  {
+    borderRadius: '2px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.125)',
+  },
+  space,
+  color
+)
+
+Card.defaultProps = {
+  p: 2,
+  bg: 'white',
+}
+
+export default Card
+```
+
+
 ## Styling via emotion
 
 ```javascript

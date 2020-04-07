@@ -24,14 +24,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/organisms/layout`),
-        },
-        extensions: [".mdx", ".md"],
+        name: `pages`,
+        path: `${__dirname}/src/content/`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -39,11 +38,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {},
     },
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-theme-ui",
+    `gatsby-plugin-theme-ui`,
     {
       resolve: "gatsby-theme-style-guide",
       options: {

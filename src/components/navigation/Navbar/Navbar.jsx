@@ -1,19 +1,19 @@
-/** @jsx jsx */
-
-import { jsx, Box, Flex, space } from "theme-ui"
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import Logo from "../../atoms/Logo"
 import NavbarLinks from "../NavbarLinks"
 import styled from "@emotion/styled"
+import { space } from "styled-system"
 
 const Navigation = styled.nav`
-  padding: ${props => props.theme.space.p4};
+  /* padding: ${props => props.theme.space.p1}; */
+  /* background-color: ${props => props.theme.colors.primary}; */
   background-color: ${props => props.theme.colors.primary};
   align-items: center;
   justify-content: space-between;
   display: flex;
-  flex: 1;
+  flex: 0;
+  ${space}
 `
 
 const Toggle = styled.div`
@@ -31,6 +31,7 @@ const Navbox = styled.div`
   height: 100%;
   justify-content: flex-end;
   align-items: center;
+  background-color: ${props => props.theme.colors.primary};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -40,15 +41,15 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: ;
     transition: all 0.3s ease-in;
-    /* top: 8vh; */
+    top: 10vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
 
 const Hamburger = styled.div`
   background-color: #fff;
-  width: 30px;
-  height: 3px;
+  width: 28px;
+  height: 2px;
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
@@ -56,8 +57,8 @@ const Hamburger = styled.div`
 
   ::before,
   ::after {
-    width: 30px;
-    height: 3px;
+    width: 28px;
+    height: 2px;
     background-color: #fff;
     content: "";
     position: absolute;
@@ -81,11 +82,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation
-      sx={{
-        p: 4,
-      }}
-    >
+    <Navigation px={[2, 4]} py={[2, 4]}>
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}

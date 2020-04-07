@@ -9,7 +9,7 @@ import gatsbyPluginThemeUi from "../../../gatsby-plugin-theme-ui"
 
 const NavItem = styled(Link)`
   color: ${props => props.theme.colors.white};
-  padding: 2px 8px 2px 8px;
+  /* padding: 2px 8px 2px 8px; */
   text-decoration: none;
   font-weight: normal;
   display: inline-block;
@@ -35,7 +35,6 @@ const NavItem = styled(Link)`
   :hover {
     color: ${props => props.theme.colors.primary};
     text-decoration: none;
-    background-color: white;
     ::after {
       width: 100%;
     }
@@ -44,7 +43,7 @@ const NavItem = styled(Link)`
   @media (max-width: 768px) {
     padding: 20px 0;
     font-size: 1.5rem;
-    /* z-index: 6; */
+    z-index: 6;
   }
 `
 
