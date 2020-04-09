@@ -30,14 +30,6 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-    `gatsby-plugin-mdx`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-        omitGoogleFont: false,
-      },
-    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {},
