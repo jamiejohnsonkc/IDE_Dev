@@ -9,16 +9,32 @@ const Navigation = styled.nav`
   /* padding: ${props => props.theme.space.p1}; */
   /* background-color: ${props => props.theme.colors.primary}; */
   background-color: ${props => props.theme.colors.primary};
-  align-items: center;
-  justify-content: space-between;
+  height: 10vh;
   display: flex;
-  flex: 0;
+  position: relative;
+  justify-content: space-between;
+  text-transform: uppercase;
+  border-bottom: 2px solid ${props => props.theme.colors.muted};
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  align-self: center;
+  align-items: center;
   ${space}
+
+  @media (max-width: 768px) {
+    position: sticky;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+  }
 `
 
 const Toggle = styled.div`
   display: none;
-  height: "100%";
+  height: 100%;
   cursor: pointer;
 
   @media (max-width: 786px) {
@@ -41,7 +57,7 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: ;
     transition: all 0.3s ease-in;
-    top: 10vh;
+    top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `

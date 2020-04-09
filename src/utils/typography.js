@@ -18,7 +18,7 @@ const typography = new Typography({
     "Segoe UI Symbol",
   ],
   bodyFontFamily: [
-    "Arial",
+    "Georgia",
     "-apple-system",
     "BlinkMacSystemFont",
     "Segoe UI",
@@ -29,7 +29,7 @@ const typography = new Typography({
     "Segoe UI Emoji",
     "Segoe UI Symbol",
   ],
-  monospace: ["monospace", "Menlo"],
+  monospace: ["Arial", "monospace", "Menlo"],
   scaleRatio: 1.61803398875,
   bodyColor: "hsla(0,0%,0%,0.8)",
   headerWeight: 700,
@@ -80,6 +80,8 @@ const typography = new Typography({
     },
   }),
 })
+
+export const { scale, rhythm, options } = typography
 
 export default typography
 

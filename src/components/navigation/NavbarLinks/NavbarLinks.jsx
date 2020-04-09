@@ -2,12 +2,10 @@
 import { jsx, rhythm } from "theme-ui"
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import gatsbyPluginThemeUi from "../../../gatsby-plugin-theme-ui"
-//import { Test } from './NavbarLinks.styles';
+import { NavLink } from "theme-ui"
 
-const NavItem = styled(Link)`
+const NavItem = styled(NavLink)`
   color: ${props => props.theme.colors.white};
   /* padding: 2px 8px 2px 8px; */
   text-decoration: none;
