@@ -27,15 +27,20 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {},
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-theme-ui`,
     {
-      resolve: "gatsby-theme-style-guide",
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        // sets path for generated page
-        basePath: "/design-system",
+        // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -59,7 +64,15 @@ module.exports = {
     },
 
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

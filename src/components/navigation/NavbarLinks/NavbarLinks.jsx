@@ -1,12 +1,9 @@
-/** @jsx jsx */
-import { jsx, rhythm } from "theme-ui"
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
-import { NavLink } from "theme-ui"
+import { Link } from "gatsby"
 
-const NavItem = styled(NavLink)`
-  color: ${props => props.theme.colors.white};
+const NavItem = styled(Link)`
   /* padding: 2px 8px 2px 8px; */
   text-decoration: none;
   font-weight: normal;
@@ -25,13 +22,11 @@ const NavItem = styled(NavLink)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: ${props => props.theme.colors.primary};
     height: 1px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: ${props => props.theme.colors.primary};
     text-decoration: none;
     ::after {
       width: 100%;

@@ -1,27 +1,27 @@
-/** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
 import React from "react"
 import Navbar from "../../navigation/Navbar"
 import Footer from "../../molecules/Footer"
 
+import Main from "../../organisms/Main"
+
 const Layout = ({ props, children }) => (
-  <Flex
-    sx={{
-      flexDirection: "column",
-      height: "100%",
-    }}
-  >
+  <div>
+    {/*  sx={{
+        flexDirection: "column",
+        height: "100%",
+      }}*/}
+
     <Navbar />
-    <main
-      style={{
+    <Main>
+      {/*style={{
         flexGrow: 1,
-      }}
-    >
+      }}*/}
+
       {children}
-    </main>
+    </Main>
 
     <Footer />
-  </Flex>
+  </div>
 )
 
 export default Layout

@@ -1,8 +1,7 @@
 import React from "react"
 //import { Button, T0, T1, T2, T3, T4, T5 } from "./"
-import { Styled } from "theme-ui"
 import Text from "./"
-import gatsbyPluginThemeUi from "../../../gatsby-plugin-theme-ui"
+import gatsbyPluginThemeUi from "../../../theme"
 
 export default {
   title: "Text",
@@ -13,8 +12,8 @@ export default {
 // `
 export const standard = () => (
   <div>
-    <Text>Testy Text Text</Text>
-    <Styled.h1>New Test Text?</Styled.h1>
+    <text>Testy Text Text</text>
+    <h1>New Test Text?</h1>
     <h1>This is the h1 header</h1>
     <h2>This is the h2 header</h2>
     <h3>This is the h3 header</h3>

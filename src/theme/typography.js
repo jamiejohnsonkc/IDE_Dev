@@ -1,6 +1,5 @@
 import React from "react"
-import { ThemeProvider } from "theme-ui"
-import { toTheme } from "@theme-ui/typography"
+import { ThemeProvider } from "styled-components"
 import githubTheme from "typography-theme-github"
 
 const theme = toTheme(githubTheme)

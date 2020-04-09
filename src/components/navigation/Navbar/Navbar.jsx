@@ -3,11 +3,8 @@ import PropTypes from "prop-types"
 import Logo from "../../atoms/Logo"
 import NavbarLinks from "../NavbarLinks"
 import styled from "@emotion/styled"
-import { space } from "styled-system"
 
 const Navigation = styled.nav`
-  /* padding: ${props => props.theme.space.p1}; */
-  /* background-color: ${props => props.theme.colors.primary}; */
   background-color: ${props => props.theme.colors.primary};
   height: 10vh;
   display: flex;
@@ -20,7 +17,6 @@ const Navigation = styled.nav`
   z-index: 2;
   align-self: center;
   align-items: center;
-  ${space}
 
   @media (max-width: 768px) {
     position: sticky;

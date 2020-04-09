@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, Flex } from "theme-ui"
+import { Flex } from "rebass"
 import React from "react"
 import PropTypes from "prop-types"
 //import { Test } from './Hero.styles';

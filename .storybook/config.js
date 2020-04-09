@@ -1,8 +1,5 @@
 import { configure, addDecorator } from "@storybook/react"
 import React from "react"
-import { ThemeProvider } from "theme-ui"
-import theme from "../src/gatsby-plugin-theme-ui/index"
-
 import typography from "../src/utils/typography"
 
 typography.injectStyles()

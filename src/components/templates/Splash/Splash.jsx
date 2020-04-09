@@ -1,11 +1,13 @@
 import React from "react"
+import Themeprovider from "styled-components"
+import Theme from "../../../theme"
 import PropTypes from "prop-types"
 import Layout from "../../organisms/Layout"
 import Hero from "../../organisms/Hero"
 //import { Test } from './Splash.styles';
 
 const Splash = () => (
-  <Layout>
+  <div>
     no wrapper
     <text>text wrapper</text>
     <h1>heading h1</h1>
@@ -20,7 +22,7 @@ const Splash = () => (
       exercitation. Labore qui proident exercitation nisi deserunt fugiat cillum
     </p>
     <p>nostrud cupidatat incididunt aute ipsum pariatur. Ex elit dolor id</p>
-  </Layout>
+  </div>
 )
 
 Splash.propTypes = {
