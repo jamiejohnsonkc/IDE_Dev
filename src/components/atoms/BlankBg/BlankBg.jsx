@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const BlankBg = () => (
+const BlankBg = props => (
   <div
     style={{
       background: "#f1f1f1",

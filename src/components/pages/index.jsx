@@ -1,5 +1,5 @@
 export { default as IndexPage } from "./IndexPage/IndexPage.react"
-export { default as TypogTest } from "./TypogTest/TypogTest.react"
+export { default as InsightsPage } from "./InsightsPage/InsightsPage.react"
+export { default as ServicesPage } from "./ServicesPage/ServicesPage.react"
+export { default as ProfilePage } from "./ProfilePage/ProfilePage.react"
 export { default as NotFoundPage } from "./404Page/404Page.react"
-export { default as TestPage } from "./TestPage/TestPage.react"
-export { default as StyleGuidePage } from "./StyleGuidePage/StyleGuidePage.react"

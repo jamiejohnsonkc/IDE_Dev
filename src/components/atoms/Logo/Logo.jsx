@@ -8,7 +8,7 @@ import styled from "@emotion/styled"
 const IconMargin = styled(Icon)`
   width: 3rem;
   fill: white;
-  margin: 2rem 2rem;
+  /* margin: 2rem 2rem; */
   &:hover {
     fill: blue;
   }

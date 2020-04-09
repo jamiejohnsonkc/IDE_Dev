@@ -1,17 +1,17 @@
 /** @jsx jsx */
 import { jsx, Flex } from "theme-ui"
 import React from "react"
-import Header from "../../molecules/Header"
+import Navbar from "../../navigation/Navbar"
 import Footer from "../../molecules/Footer"
 
-const Layout = ({ children }) => (
+const Layout = ({ props, children }) => (
   <Flex
     sx={{
       flexDirection: "column",
       height: "100%",
     }}
   >
-    <Header />
+    <Navbar />
     <main
       style={{
         flexGrow: 1,

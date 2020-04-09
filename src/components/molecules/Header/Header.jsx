@@ -1,24 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import Navbar from "../../navigation/Navbar"
-import Logo from "../../atoms/Logo"
+import styled from "@emotion/styled"
+
+const StyledHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
 
 const Header = props => (
-  <header
-    {...props}
+  <StyledHeader
     sx={{
-      bg: "black",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
+      p: 4,
     }}
   >
-    <Logo />
     <Navbar />
-  </header>
+  </StyledHeader>
 )
 
 Header.propTypes = {
@@ -26,7 +26,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: PropTypes.string,
 }
 
 export default Header

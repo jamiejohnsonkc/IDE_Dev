@@ -1,11 +1,12 @@
 import React from "react"
 import typography from "../utils/typography"
+import { merge } from "theme-ui"
 
 export default {
   breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    heading: `${typography.options.headerFontFamily}`,
+    heading: `${typography.options.header}`,
     body: `${typography.options.bodyFontFamily}`,
     monospace: `${typography.options.monospace}`,
   },
@@ -22,10 +23,10 @@ export default {
   colors: {
     text: "#000",
     background: "#fff",
-    primary: "#07c",
-    secondary: "#30c",
+    primary: "#000",
+    secondary: "#373636",
     accent: "red",
-    highlight: "",
+    highlight: "#bfbdbd",
     white: "#fff",
     muted: "#f6f6f6",
     modes: {
@@ -35,7 +36,7 @@ export default {
         primary: "#0cf",
       },
     },
-  }, 
+  },
 
   text: {
     heading: {
@@ -61,29 +62,15 @@ export default {
     },
   },
   links: {
-    bold: {
-      fontWeight: "bold",
-    },
-    mainNav: {
-      fontWeight: "bold",
+    nav: {
+      fontWeight: "regular",
+      fontSize: 0,
+      fontFamily: "monospace",
       color: "white",
       textDecoration: "none",
       px: 2,
-      py: 1,
-      textTransform: "lowercase",
-      letterSpacing: "0.2em",
-      "&:hover": {
-        color: "black",
-        bg: "white",
-      },
-    },
-    drawerNav: {
-      fontWeight: "bold",
-      color: "white",
-      textDecoration: "none",
-      px: 2,
-      py: 1,
-      textTransform: "lowercase",
+      py: 2,
+      textTransform: "uppercase",
       letterSpacing: "0.2em",
       "&:hover": {
         color: "black",
@@ -128,9 +115,6 @@ export default {
       code: {
         color: "inherit",
       },
-    },
-    a: {
-      fontFamily: "text.heading",
     },
     code: {
       fontFamily: "monospace",

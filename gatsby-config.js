@@ -1,31 +1,49 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `JIM's gatsby design system starter`,
+    description: `Gatsby, storybook, theme-ui`,
+    author: `Jamie Johnson`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "services",
+        link: "/services",
+      },
+      {
+        name: "insights",
+        link: "/insights",
+      },
+      {
+        name: "profile",
+        link: "/profile",
+      },
+    ],
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/organisms/layout`),
-        },
-        extensions: [".mdx", ".md"],
+        name: `pages`,
+        path: `${__dirname}/src/content/`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: false,
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {},
     },
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-theme-ui",
+    `gatsby-plugin-theme-ui`,
     {
       resolve: "gatsby-theme-style-guide",
       options: {
@@ -37,7 +55,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static/images`,
       },
     },
     {
