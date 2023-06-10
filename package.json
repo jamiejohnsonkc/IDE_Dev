@@ -13,7 +13,7 @@
     "@theme-ui/typography": "^0.3.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
-    "gatsby": "^2.19.7",
+    "gatsby": "^4.25.7",
     "gatsby-cli": "^2.10.2",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
